@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #D82F5A;
+}
+
+h1 {
+    font-family: montserrat;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 25px;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+.white-body {
+    margin-top: 50px;
+    background-color: white;
+    width: 90%;
+    min-height: 725px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+
+.applicant-number{
+    padding-left: 20px;
+}
+
+.applicant{
+    font-family: montserrat;
+    margin-bottom: 20px;
+}
+
+.applicant-list {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    border-radius: 20px;
+    transition: all 10s ease;
+}
+
+.applicant-list li {
+    background-color: #D82F5A;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+
+.applicant-list li.active {
+    background-color: #991133;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.applicant-details {
+    display: none;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications</title>
+    <img class="logo" src="images/LOGOS_6_cropped.png">
+    <link rel="stylesheet" href="applications.css">
+    <script src="/applications.js" defer></script>
+</head>
+
+<body>
+    <div class="white-body">
+        <div class="left-side-placeholder"></div>
+        <div class="divider"></div>
+        <h1>Applications</h1>
+        <ul class="applicant-list">
+            <div class="applicant">
+                <li onclick="toggleDetails('appid')">
+                    <p class="applicant-number">1</p>
+                </li>
+                <div id="appid" class="applicant-details">
+                    <p>Name: John Doe</p>
+                    <p>Email: john.doe@example.com</p>
+                </div>
+            </div>
+            <div class="applicant">
+                <li onclick="toggleDetails('appid2')">
+                    <p class="applicant-number">2</p>
+                </li>
+                <div id="appid2" class="applicant-details">
+                    <p> You look SUS</p>
+                </div>
+            </div>
+        </ul>
+    </div>
+</body>
+
+</html>
