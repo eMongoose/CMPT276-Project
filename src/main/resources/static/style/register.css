@@ -109,6 +109,11 @@ html{
     height: 60px;
 }
 
+.registerButton:hover {
+    cursor: pointer;
+    background-color: rgb(246, 70, 70);
+}
+
 .inputContainer {
     display: flex;
     flex-direction: column;
