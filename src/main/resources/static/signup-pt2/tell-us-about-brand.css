@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #D82F5A;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+.white-box {
+    background-color: white;
+    border-radius: 30px;
+    width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+}
+
+.title {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    padding-top: 45px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.tell-us-about-yourself {
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-left: 50px;
+}
+
+.brand-name,
+.website-link,
+.brand-story {
+    margin-left: 50px;
+    font-family: Montserrat;
+    background-color: #F4E3E3;
+    margin-bottom: 30px;
+    width: 75%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+
+.brand-story {
+    height: 200px;
+    resize: none;
+    padding: 10px;
+}
+
+.submit-button {
+    font-family: Montserrat;
+    background-color: #E54E4E;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left:50px;
+    padding-right:50px;
+    border: none;
+    font-weight: 700;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background-color: #E54E4E;
+}
+
+.circle-top-left {
+    height: 750px;
+    width: 750px;
+    background-color: #E5537F;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -500;
+    top: -250px;
+    left: -250px;
+
+}
+
+.circle-bot-right {
+    height: 750px;
+    width: 750px;
+    background-color: #E5537F;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -500;
+    bottom: -300px;
+    right: -250px;
+
+}
