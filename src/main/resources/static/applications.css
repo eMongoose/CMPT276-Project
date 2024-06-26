@@ -29,48 +29,45 @@ h1 {
 }
 
 
-.applicant-number{
-    padding-left: 20px;
-}
-
-.applicant{
-    font-family: montserrat;
-    margin-bottom: 20px;
-}
-
 .applicant-list {
-    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default to three columns */
+    gap: 50px; /* Adds space between the grid items */
+    width: 90%;
+    list-style: none;
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    list-style: none;
-    border-radius: 20px;
-    transition: all 10s ease;
 }
 
-.applicant-list li {
-    background-color: #D82F5A;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 5px;
+.applicant {
     border: 1px solid #ddd;
-    margin-top: -1px;
-}
-
-.applicant-list li.active {
-    background-color: #991133;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-
-}
-
-.applicant-details {
-    display: none;
-    padding: 10px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 60px;
     background-color: #f9f9f9;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    text-align: center;
+    height: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.applicant:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.applicant-number {
+    font-size: 20px;
+    color: #333;
+}
+
+@media (max-width: 1024px) { 
+    .applicant-list {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) { 
+    .applicant-list {
+        grid-template-columns: 1fr; 
+    }
 }
