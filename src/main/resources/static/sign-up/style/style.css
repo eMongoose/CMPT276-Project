@@ -1,0 +1,108 @@
+html{
+    box-sizing: border-box;
+    box-sizing: 95%;
+    background-color: #D82F5A;
+}
+.logo {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+.corner-circle-bottom {
+    position: fixed;
+    bottom: -380px; /* Adjust as needed */
+    right: -285px; /* Adjust as needed */
+    width: 750px; /* Adjust as needed */
+    height: 750px; /* Adjust as needed */
+    background-color: rgba(229, 83, 127, 1);
+    border-radius: 50%;
+    z-index: 1;
+}
+.corner-circle-top {
+    position: fixed;
+    top: -380px; /* Adjust as needed */
+    left: -270px; /* Adjust as needed */
+    width: 750px; /* Adjust as needed */
+    height: 750px; /* Adjust as needed */
+    background-color: rgba(229, 83, 127, 1);
+    border-radius: 50%;
+    z-index: 1;
+}
+.mainContainer{
+    position: relative;
+    background-color: white;    
+    height: 700px;
+    width: 600px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    z-index: 2;
+}
+.signUpHead{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px;
+    padding: 40px;
+}
+.username, .usermail, .password{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+.termsAndconditions{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    padding-left: 40px;
+    padding-top: 20px;
+
+}
+.signUp{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: rgba(229, 78, 78, 0.89);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    height: 60px;
+    margin-top: 40px;
+    margin-left: 31.5%;
+
+}
+/* .fa-user, .fa-envelope, .fa-key{
+    padding: 10px;
+    min-width: 50px;
+    margin-top: 35px;
+    text-align: center;
+    color: #D82F5A;
+} */
+/* .username i, .usermail i, .password i{
+    position: absolute;
+} */
+/* #userBox{
+    position: absolute;
+} */
+#username, #usermail, #password{
+    width: 90%;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    /* margin-top: 20px; */
+    text-align: center;
+    font-size: 20px;
+    background-color: #F4E3E3;
+}
+#username:focus, #usermail:focus, #password:focus{
+    outline: none;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signing-up-1</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <img class="logo" src="../images/LOGOS_6_cropped.png">
+</head>
+<body>
+    <span class="corner-circle-bottom"></span>
+    <span class="corner-circle-top"></span>
+    <main class="mainContainer">
+        <form action="post">
+            <div class="signUpHead">Sign Up</div>
+            <div class="username"> 
+                    <label for="username" id="userBox">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="usermail">
+                <label for="usermail" id="userBox">Email</label>
+                <input type="text" id="usermail"
+                name="usermail" placeholder="Enter your email">
+            </div>
+            <div class="password">
+                <label for="password" id="userBox">Password</label>
+                <input type="password" id="password"
+                name="password" placeholder="Enter your password">
+        </form>
+        <div class="termsAndconditions">
+            <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required>
+            <label for="termsAndConditions">I have read and agreed to the 
+                <a href="https://www.multibrandsampling.com/"> terms and conditions</a>
+            </label>
+        </div>
+        <div class="signUpButton">
+            <button class="signUp" onclick="location.href='sign-up-2.html';">Next</button>
+    </main>
+</body>
+</html>
