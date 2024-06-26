@@ -42,11 +42,10 @@ body {
     width: 75%;
     height: 50px;
     border-radius: 20px;
-    border: size 1px;
     background-color: #D82F5A;
     font-size: 20px;
     color: white;
-    border-color: white;
+    border: 1px white;
 }
 
 .forgot-password-button {
@@ -55,6 +54,5 @@ body {
     margin-right: 60px;
     margin-top: -20px;
     text-align: right;
-    float: right;
     font-size: 20px
 }
