@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signing-up-1</title>
-    <link rel="stylesheet" href="style/register.css">
-    <script src="Scripts/register.js"></script>
+    <link rel="stylesheet" th:href="@{style/register.css}" href="../static/style/register.css">
+    <script th:src="@{scripts/register.js}" src="../static/scripts/register.js"></script>
 </head>
 <body>
 <div class="corner-circle-bottom"></div>
 <div class="corner-circle-top"></div>
 <div class="centerBox">
-    <img class="logo" src="images/LOGOS_6_cropped.png" alt="">
+    <img class="logo" src="../static/images/LOGOS_6_cropped.png" alt="">
     <div class="formBox">
         <form class="registerForm" id="registerForm" method="post">
             <div id="part1" class="mainContainer">
