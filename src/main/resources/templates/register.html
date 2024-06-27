@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signing-up-1</title>
+    <link rel="stylesheet" th:href="@{style/register.css}" href="../static/style/register.css">
+    <script th:src="@{scripts/register.js}" src="../static/scripts/register.js"></script>
+</head>
+<body>
+<div class="corner-circle-bottom"></div>
+<div class="corner-circle-top"></div>
+<div class="centerBox">
+    <img class="logo" th:src="@{images/LOGOS_6_cropped.png}" src="../static/images/LOGOS_6_cropped.png" alt="">
+    <div class="formBox">
+        <form class="registerForm" id="registerForm" method="post">
+            <div id="part1" class="mainContainer">
+                <div class="signUpHead">Sign Up</div>
+                <div class="inputContainer">
+                    <div class="smallInput">
+                        <label for="username" id="userLabel">Username</label>
+                        <input type="text" class="textInput" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="smallInput">
+                        <label for="userMail" id="mailLabel">Email</label>
+                        <input type="email" class="textInput" id="userMail" name="userMail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="smallInput">
+                        <label for="password" id="userBox">Password</label>
+                        <input type="password" class="textInput" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                </div>
+                <div class="termsAndConditions">
+                    <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required>
+                    <label class="termsAndConditionsCheckBox" for="termsAndConditions">I have read and agreed to the
+                        <a class="termsAndConditions" href="https://www.multibrandsampling.com/" target="_blank"> terms and conditions</a>
+                    </label>
+                </div>
+                <div class="nextButton">
+                    <button class="registerButton" onclick="changePart()">Next</button>
+                </div>
+            </div>
+            <div id="part2" class="mainContainer">
+                <div class="signUpHead">Tell Us About Your Brand</div>
+                <div class="smallInput">
+                    <label for="companyName" id="companyLabel">Brand Name</label>
+                    <input type="text" class="textInput" id="companyName" name="companyName" placeholder="Enter your Brand Name" required>
+                </div>
+                <div class="largeInput">
+                    <label for="brandStory" id="brandLabel">Brand Story</label>
+                    <textarea form="registerForm" id="brandStory" name="brandStory" placeholder="Tell us about your brand" required></textarea>
+                </div>
+                <div class="smallInput">
+                    <label for="websiteLink" id="websiteLabel">Website Link</label>
+                    <input type="url" class="textInput" id="websiteLink" name="websiteLink" placeholder="Enter your Website">
+                </div>
+                <div class="smallInput">
+                    <label for="instagramLink" id="instagramLabel">Website Link</label>
+                    <input type="url" class="textInput" id="instagramLink" name="instagramLink" placeholder="Enter your Instagram">
+                </div>
+                <div class="disclaimer">*Although a website and instagram aren't required it does make verifying your brand much easier</div>
+                <div class="smallInput">
+                    <input type="submit" class="registerButton" id="submitButton" name="submitButton" value="Submit">
+                </div>
+                <div class="backButton">
+                    <button class="registerButton" onclick="changePart()">Back</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
