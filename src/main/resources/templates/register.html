@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signing-up-1</title>
-    <link rel="stylesheet" th:href="@{style/register.css}" href="../static/style/register.css">
-    <script th:src="@{scripts/register.js}" src="../static/scripts/register.js"></script>
+    <link rel="stylesheet" th:href="@{register/register.css}" href="../static/register/register.css">
+    <script th:src="@{register/register.js}" src="../static/register/register.js"></script>
 </head>
 <body>
 <div class="corner-circle-bottom"></div>
 <div class="corner-circle-top"></div>
 <div class="centerBox">
-    <img class="logo" th:src="@{images/LOGOS_6_cropped.png}" src="../static/images/LOGOS_6_cropped.png" alt="">
+    <img class="logo" th:src="@{register/LOGOS_6_cropped.png}" src="../static/register/LOGOS_6_cropped.png" alt="">
     <div class="formBox">
         <form class="registerForm" id="registerForm" method="post">
             <div id="part1" class="mainContainer">
@@ -44,7 +44,7 @@
                 <div class="signUpHead">Tell Us About Your Brand</div>
                 <div class="smallInput">
                     <label for="companyName" id="companyLabel">Brand Name</label>
-                    <input type="text" class="textInput" id="companyName" name="companyName" placeholder="Enter your Brand Name" required>
+                    <input type="text" class="textInput2" id="companyName" name="companyName" placeholder="Enter your Brand Name" required>
                 </div>
                 <div class="largeInput">
                     <label for="brandStory" id="brandLabel">Brand Story</label>
@@ -52,17 +52,19 @@
                 </div>
                 <div class="smallInput">
                     <label for="websiteLink" id="websiteLabel">Website Link</label>
-                    <input type="url" class="textInput" id="websiteLink" name="websiteLink" placeholder="Enter your Website" required>
+                    <input type="url" class="textInput2" id="websiteLink" name="websiteLink" placeholder="Enter your Website" required>
                 </div>
                 <div class="smallInput">
                     <label for="instagramLink" id="instagramLabel">Website Link</label>
-                    <input type="url" class="textInput" id="instagramLink" name="instagramLink" placeholder="Enter your Instagram">
+                    <input type="url" class="textInput2" id="instagramLink" name="instagramLink" placeholder="Enter your Instagram">
                 </div>
-                <div class="smallInput">
-                    <input type="submit" class="registerButton" id="submitButton" name="submitButton" value="Submit">
-                </div>
-                <div class="backButton">
-                    <button class="registerButton" onclick="changePart()">Back</button>
+                <div class="submitContainer">
+                    <div class="backButton">
+                        <button class="registerButton" onclick="changePart()">Back</button>
+                    </div>
+                    <div class="smallInput">
+                        <input type="submit" class="registerButton" id="submitButton" name="submitButton" value="Submit">
+                    </div>
                 </div>
             </div>
         </form>

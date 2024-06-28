@@ -25,8 +25,8 @@ html{
     position: fixed;
     bottom: -380px; /* Adjust as needed */
     right: -225px; /* Adjust as needed */
-    width: 850px; /* Adjust as needed */
-    height: 850px; /* Adjust as needed */
+    width: 950px; /* Adjust as needed */
+    height: 950px; /* Adjust as needed */
     background-color: rgba(229, 83, 127, 1);
     border-radius: 50%;
     z-index: 1;
@@ -35,8 +35,8 @@ html{
     position: fixed;
     top: -380px; /* Adjust as needed */
     left: -170px; /* Adjust as needed */
-    width: 850px; /* Adjust as needed */
-    height: 850px; /* Adjust as needed */
+    width: 950px; /* Adjust as needed */
+    height: 950px; /* Adjust as needed */
     background-color: rgba(229, 83, 127, 1);
     border-radius: 50%;
     z-index: 1;
@@ -137,7 +137,17 @@ html{
     outline: none;
 }
 
-
+.textInput2 {
+    width: 550px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    text-align: start;
+    padding-left: 10px;
+    font-size: 20px;
+    background-color: #F4E3E3;
+    font-family: "Montserrat", sans-serif;
+}
 
 #part2 {
     display: none;
@@ -162,16 +172,26 @@ html{
 textarea {
     font-family: "Montserrat", sans-serif;
     resize: none;
-    width: 450px;
+    width: 550px;
     height: 300px;
     border-radius: 10px;
     border: none;
     text-align: start;
     padding-left: 10px;
+    padding-top: 15px;
     font-size: 20px;
     background-color: #F4E3E3;
 }
 
 textarea:focus {
     outline: none;
+}
+
+.submitContainer {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 450px;
 }

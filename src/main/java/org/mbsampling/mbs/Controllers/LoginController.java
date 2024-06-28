@@ -16,8 +16,8 @@ public class LoginController {
         return "forgotpassword";
     }
 
-    @GetMapping ("sign-up")
-    String signUp() {
-        return "sign-in-redirect";
+    @GetMapping("/register")
+    String register() {
+        return "register";
     }
 }

@@ -199,13 +199,20 @@ form {
     gap: 50px
 }
 
-.forgotPass {
+.link {
     font-family: "Montserrat", sans-serif;
     color: #7E3030;
     font-size: 13px;
     text-decoration: none;
 }
 
-.forgotPass:hover {
+.link:hover {
     text-decoration: underline;
+}
+
+.links {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
