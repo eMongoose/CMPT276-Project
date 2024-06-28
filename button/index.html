@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="filter-container">
+        <button class="filter-button" onclick="filterSort()">Filter</button>
+        <div class="filter-menu" id="filterMenu">
+            <label>
+                <input type="radio" name="filter" value="brandName" checked>
+                <p>Brand Name</p>
+            </label>
+            <label>
+                <input type="radio" name="filter" value="dateCreated">
+                <p>Date Created</p>
+            </label>
+            <label>
+                <input type="radio" name="filter" value="brandType">
+                <p>Brand Type</p>
+            </label>
+        </div>
+    </div>
+</body>
+
+</html>

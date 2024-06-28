@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: montserrat;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.filter-container {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-button {
+    font-family: montserrat;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+.filter-menu label {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/** after dropdown **/
+.filter-menu {
+    background-color: #ffffff;
+    font-size: 13px;
+    /** size of words in dropdown **/
+
+    display: none;
+    /** hide the menu **/
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+    width: 150px;
+}
+
+/** hide original radio button**/
+.filter-menu input[type="radio"] {
+    display: none;
+}
+
+.filter-menu input[type="radio"]+p {
+    position: relative;
+    padding-left: 25px;
+    /** padding for the words **/
+    cursor: pointer;
+}
+
+/** the big circle **/
+.filter-menu input[type="radio"]+p:before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+}
+
+/** the small circle **/
+.filter-menu input[type="radio"]:checked+p:after {
+    content: '';
+    position: absolute;
+    left: 5.5px;
+    /** Y-pos of the small circle **/
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000;
+}
