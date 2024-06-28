@@ -9,19 +9,26 @@
 </head>
 
 <body>
+<div class="corner-circle-bottom"></div>
+<div class="corner-circle-top"></div>
 <img class="logo" th:src="@{login/LOGOS_6_cropped.png}" src="../static/images/LOGOS_6_cropped.png">
     <div class="white-box">
         <div class="login">
-            <p id="login-tag">Login</p>
+            <p>Login</p>
             <input class="username-input" type="text" placeholder="Enter Username">
             <input class="password-input" type="text" placeholder="Enter Password">
             <div class="forgot-password-button">
                 <a href="forgotpassword.html">Forgot Password?</a>
             </div>
-            <button class="next-button" onclick="location.href='sign-in-redirect.html';">Next</button>
-        </div>
+            <div class="submitBox">
+                <div class="smallInput">
+                    <input type="submit" class="registerButton" id="submitButton" name="submitButton" value="Submit">
+                </div>
+                <a class="forgotPass" href="forgotpassword.html">forgot password?</a>
+            </div>
+        </form>
     </div>
-
+</div>
 </body>
 
 </html>
