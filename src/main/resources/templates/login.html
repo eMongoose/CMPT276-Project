@@ -10,18 +10,21 @@
 
 <body>
 <img class="logo" th:src="@{login/LOGOS_6_cropped.png}" src="../static/images/LOGOS_6_cropped.png">
-    <div class="white-box">
-        <div class="login">
-            <p>Login</p>
-            <input class="username-input" type="text" placeholder="Enter Username">
-            <input class="password-input" type="text" placeholder="Enter Password">
-            <div class="forgot-password-button">
-                <a href="forgotpassword.html">Forgot Password?</a>
+<div class="centerBox">
+    <div class="mainContainer">
+        <div class="Head">Login</div>
+        <form id="login">
+            <div class="smallInput">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
             </div>
-            <button class="next-button" onclick="location.href='sign-in-redirect.html';">Next</button>
-        </div>
+            <div class="smallInput">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+        </form>
     </div>
-
+</div>
 </body>
 
 </html>
