@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <img class="logo" src="../static/images/LOGOS_6_cropped.png">
-    <link rel="stylesheet" href="../static/login.css">
+    <link rel="stylesheet" th:href="@{login/login.css}" href="../static/login/login.css">
 </head>
 
 <body>
+<img class="logo" th:src="@{login/LOGOS_6_cropped.png}" src="../static/images/LOGOS_6_cropped.png">
     <div class="white-box">
         <div class="login">
             <p>Login</p>
