@@ -26,8 +26,8 @@ html{
     position: fixed;
     bottom: -380px;
     right: -225px;
-    width: 850px;
-    height: 850px;
+    width: 950px;
+    height: 950px;
     background-color: rgba(229, 83, 127, 1);
     border-radius: 50%;
     z-index: 1;
@@ -36,8 +36,8 @@ html{
     position: fixed;
     top: -380px;
     left: -170px;
-    width: 850px;
-    height: 850px;
+    width: 950px;
+    height: 950px;
     background-color: rgba(229, 83, 127, 1);
     border-radius: 50%;
     z-index: 1;
