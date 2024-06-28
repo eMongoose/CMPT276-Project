@@ -16,7 +16,7 @@ public class LoginController {
         return "forgotpassword";
     }
 
-    @GetMapping ("sign-up")
+    @GetMapping ("/sign-up")
     String signUp() {
         return "sign-in-redirect";
     }
