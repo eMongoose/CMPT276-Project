@@ -24,27 +24,27 @@ html{
 
 .corner-circle-bottom {
     position: fixed;
-    bottom: -380px; /* Adjust as needed */
-    right: -225px; /* Adjust as needed */
-    width: 850px; /* Adjust as needed */
-    height: 850px; /* Adjust as needed */
+    bottom: -380px;
+    right: -225px;
+    width: 850px;
+    height: 850px;
     background-color: rgba(229, 83, 127, 1);
     border-radius: 50%;
     z-index: 1;
 }
 .corner-circle-top {
     position: fixed;
-    top: -380px; /* Adjust as needed */
-    left: -170px; /* Adjust as needed */
-    width: 850px; /* Adjust as needed */
-    height: 850px; /* Adjust as needed */
+    top: -380px;
+    left: -170px;
+    width: 850px;
+    height: 850px;
     background-color: rgba(229, 83, 127, 1);
     border-radius: 50%;
     z-index: 1;
 }
 .mainContainer{
     display: flex;
-    gap: 30px;
+    gap: 90px;
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -64,7 +64,7 @@ html{
 }
 .Head{
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     font-size: 30px;
     padding: 40px 0 20px;
@@ -106,7 +106,7 @@ html{
     color: white;
     border: none;
     border-radius: 17px;
-    width: 200px;
+    width: 160px;
     height: 60px;
 }
 
@@ -125,7 +125,7 @@ html{
 
 .textInput {
     width: 450px;
-    height: 60px;
+    height: 70px;
     border-radius: 10px;
     border: none;
     text-align: start;
@@ -175,4 +175,37 @@ textarea {
 
 textarea:focus {
     outline: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.submitBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 450px;
+    align-items: center;
+    vertical-align: center;
+    padding-bottom: 60px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 50px
+}
+
+.forgotPass {
+    font-family: "Montserrat", sans-serif;
+    color: #7E3030;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.forgotPass:hover {
+    text-decoration: underline;
 }
