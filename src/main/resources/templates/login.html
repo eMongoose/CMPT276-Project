@@ -9,30 +9,46 @@
 </head>
 
 <body>
-<div class="corner-circle-bottom"></div>
-<div class="corner-circle-top"></div>
-<img class="logo" th:src="@{login/LOGOS_6_cropped.png}" src="../static/images/LOGOS_6_cropped.png">
+    <div class="corner-circle-bottom"></div>
+    <div class="corner-circle-top"></div>
+    <img class="logo" th:src="@{login/LOGOS_6_cropped.png}" src="../static/images/LOGOS_6_cropped.png">
     <div class="mainContainer">
         <form class="login">
+            <!-- login title -->
             <div class="Head">Login</div>
+            <!-- username text box -->
             <div class="smallInput">
                 <input class="textInput" type="text" placeholder="Enter Username">
             </div>
-            <div class="smallInput">
-                <input class="textInput" type="text" placeholder="Enter Password">
+            <!-- password text box -->
+            <div class="smallInput password-container">
+                <input class="textInput password-input" type="password" id="password" placeholder="Enter Password">
+                <!-- show/hide button -->
+                <button type="button" id="togglePassword" class="toggle-password">Show</button>
             </div>
+            <!-- forgot password button -->
+            <div class="forgotPasswordLink">
+                <a class="link" href="forgotpassword">Forgot password?</a>
+            </div>
+            <!-- submit button -->
             <div class="submitBox">
-                <div class="smallInput">
-                    <input type="submit" class="registerButton" id="submitButton" name="submitButton" value="Submit">
-                </div>
-                <div class="links">
-                    <a class="link" href="register">Create an account</a>
-                    <a class="link" href="forgotpassword">Forgot password?</a>
-                </div>
+                <input type="submit" class="registerButton" id="submitButton" name="submitButton" value="Submit">
             </div>
+            <!-- make an account button -->
+            <a class="link" href="register">Create an account</a>
         </form>
-    </for>
-</div>
+    </div>
+    <script>
+        const togglePasswordVisible = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePasswordVisible.addEventListener('click', function (event) {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+
+            this.textContent = type === 'password' ? 'Show' : 'Hide';
+        });
+    </script>
 </body>
 
 </html>
