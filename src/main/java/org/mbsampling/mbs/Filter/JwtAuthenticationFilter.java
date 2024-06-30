@@ -1,4 +1,4 @@
-package org.mbsampling.mbs.Security.Filter;
+package org.mbsampling.mbs.Filter;
 
 import org.mbsampling.mbs.Service.UserDetailsImp;
 import java.io.IOException;
