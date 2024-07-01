@@ -19,18 +19,18 @@ function changePart() {
 
     if (!email.reportValidity()) return;
 
-    let passwordRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+\\-]).{8,12}$");
+    let passwordRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+\\-]).{8,}$");
 
     if (!passwordRegex.test(password.value)) {
         let response = "Invalid Password: ";
 
-        let passwordLength = new RegExp("^.{8,12}$");
+        let passwordLength = new RegExp("^.{8,}$");
         let capitalLetter = new RegExp("(?=.*[A-Z])");
         let smallLetter = new RegExp("(?=.*[a-z])");
         let number = new RegExp("(?=.*[0-9])");
         let specialCharacter = new RegExp("(?=.*[\.!@#$%^&*_)=+-])");
 
-        if (!passwordLength.test(password.value)) response += "Must be 8-12 characters long; ";
+        if (!passwordLength.test(password.value)) response += "Must be at least 8 characters long; ";
         if (!capitalLetter.test(password.value)) response += "Must include at least 1 uppercase letter; ";
         if (!smallLetter.test(password.value)) response += "Must include at least 1 lower case letter; ";
         if (!number.test(password.value)) response += "Must include at least 1 number; ";
