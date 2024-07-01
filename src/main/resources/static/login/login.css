@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-html{
+html {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #D82F5A;
     min-height: 100vh;
     box-sizing: border-box;
-}
-
-.centerBox {
-    position: relative;
 }
 
 .logo {
@@ -20,6 +16,17 @@ html{
     margin-left: auto;
     margin-right: auto;
     width: 250px;
+}
+
+.corner-circle-top {
+    position: fixed;
+    top: -380px;
+    left: -170px;
+    width: 950px;
+    height: 950px;
+    background-color: rgba(229, 83, 127, 1);
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .corner-circle-bottom {
@@ -32,17 +39,8 @@ html{
     border-radius: 50%;
     z-index: 1;
 }
-.corner-circle-top {
-    position: fixed;
-    top: -380px;
-    left: -170px;
-    width: 950px;
-    height: 950px;
-    background-color: rgba(229, 83, 127, 1);
-    border-radius: 50%;
-    z-index: 1;
-}
-.mainContainer{
+
+.mainContainer {
     display: flex;
     gap: 90px;
     flex-direction: column;
@@ -62,14 +60,16 @@ html{
     transition-property: all;
     transition-duration: 2s;
 }
-.Head{
+
+.Head {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     text-align: center;
     font-size: 30px;
     padding: 40px 0 50px;
 }
-.smallInput{
+
+.smallInput {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -78,27 +78,14 @@ html{
     font-size: 20px;
 }
 
-.largeInput {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 450;
-    font-size: 20px;
-}
-
-.termsAndConditions{
+.termsAndConditions {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 12px;
     color: #7E3030;
 }
 
-.next-button {
-    width: 200px;
-}
-
-.registerButton{
+.registerButton {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -115,14 +102,6 @@ html{
     background-color: rgb(246, 70, 70);
 }
 
-.inputContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 450px;
-}
-
 .textInput {
     width: 450px;
     height: 70px;
@@ -134,11 +113,10 @@ html{
     background-color: #F4E3E3;
     font-family: "Montserrat", sans-serif;
 }
+
 .textInput:focus {
     outline: none;
 }
-
-
 
 #part2 {
     display: none;
@@ -146,18 +124,6 @@ html{
 
 .formBox {
     display: flex;
-}
-
-.registerForm {
-    display: inline-block;
-}
-
-.disclaimer {
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    color: #7E3030;
-    width: 60%;
-    text-align: center;
 }
 
 textarea {
@@ -186,11 +152,10 @@ form {
 .submitBox {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 450px;
     align-items: center;
     vertical-align: center;
-    padding-bottom: 60px;
 }
 
 .inputBox {
@@ -204,6 +169,13 @@ form {
     color: #7E3030;
     font-size: 13px;
     text-decoration: none;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.forgotPasswordLink {
+    margin-top: -15px;
+    text-align: right;
 }
 
 .link:hover {
@@ -211,8 +183,34 @@ form {
 }
 
 .links {
-    height: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+
+.password-container {
+    position: relative;
+    align-items: center;
+}
+
+.password-input {
+    font-family: "Montserrat", sans-serif;
+    height: 70px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+/** show/hide button **/
+.toggle-password {
+    font-family: "Montserrat", sans-serif;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 17px;
+    position: absolute;
+    right: 10px;
+    height: 100%;
+
 }
