@@ -1,13 +1,14 @@
 package org.mbsampling.mbs.Service;
 
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Service;
 import org.mbsampling.mbs.Models.User;
-
+import org.mbsampling.mbs.Repository.TokenRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
 import java.util.Date;
@@ -16,15 +17,47 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    private String SECRET_KEY = "55e9ee05807471532aa3cf5467392959050de4810e2db6d3620f2302d9bc1b3f";
+    @Value("${application.security.jwt.secret-key}")
+    private String secretKey;
+
+    @Value("${application.security.jwt.access-token-expiration}")
+    private long accessTokenExpire;
+
+    @Value("${application.security.jwt.refresh-token-expiration}")
+    private long refreshTokenExpire;
+
+
+    private final TokenRepository tokenRepository;
+
+    public JwtService(TokenRepository tokenRepository) {
+        this.tokenRepository = tokenRepository;
+    }
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
 
-    public boolean isValid(String token, UserDetails userDetails) {
+
+    public boolean isValid(String token, UserDetails user) {
         String username = extractUsername(token);
-        return username.equals(userDetails.getUsername()) && !isTokenExpired(token);
+
+        boolean validToken = tokenRepository
+                .findByAccessToken(token)
+                .map(t -> !t.isLoggedOut())
+                .orElse(false);
+
+        return (username.equals(user.getUsername())) && !isTokenExpired(token) && validToken;
+    }
+
+    public boolean isValidRefreshToken(String token, User user) {
+        String username = extractUsername(token);
+
+        boolean validRefreshToken = tokenRepository
+                .findByRefreshToken(token)
+                .map(t -> !t.isLoggedOut())
+                .orElse(false);
+
+        return (username.equals(user.getUsername())) && !isTokenExpired(token) && validRefreshToken;
     }
 
     private boolean isTokenExpired(String token) {
@@ -49,12 +82,21 @@ public class JwtService {
                 .getPayload();
     }
 
-    public String generateToken(User user) {
+
+    public String generateAccessToken(User user) {
+        return generateToken(user, accessTokenExpire);
+    }
+
+    public String generateRefreshToken(User user) {
+        return generateToken(user, refreshTokenExpire );
+    }
+
+    private String generateToken(User user, long expireTime) {
         String token = Jwts
                 .builder()
                 .subject(user.getUsername())
                 .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + 24 * 60 * 60 * 1000))
+                .expiration(new Date(System.currentTimeMillis() + expireTime ))
                 .signWith(getSigninKey())
                 .compact();
 
@@ -62,8 +104,7 @@ public class JwtService {
     }
 
     private SecretKey getSigninKey() {
-        byte[] keyBytes = Decoders.BASE64URL.decode(SECRET_KEY);
+        byte[] keyBytes = Decoders.BASE64URL.decode(secretKey);
         return Keys.hmacShaKeyFor(keyBytes);
     }
-
 }
