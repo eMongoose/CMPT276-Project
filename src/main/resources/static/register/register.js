@@ -10,7 +10,7 @@ function changePart() {
     let usernameRegex= new RegExp("^.{3,}$");
 
     if (!usernameRegex.test(username.value)) {
-        username.setCustomValidity("Username must be at least characters long");
+        username.setCustomValidity("Username must be at least 3 characters long");
         username.reportValidity();
         return;
     } else {
