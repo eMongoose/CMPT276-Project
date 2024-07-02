@@ -77,6 +77,7 @@ html {
     font-size: 30px;
     padding: 40px 0 50px;
 }
+
 .smallInput{
     display: flex;
     flex-direction: column;
@@ -135,10 +136,23 @@ html {
     background-color: #F4E3E3;
     font-family: "Montserrat", sans-serif;
 }
+.textInput2 {
+    width: 450px;
+    height: 70px;
+    border-radius: 10px;
+    border: none;
+    text-align: start;
+    padding-left: 10px;
+    font-size: 20px;
+    background-color: #F4E3E3;
+    font-family: "Montserrat", sans-serif;
+}
 
-.textInput:focus {
+.textInput:focus, .textInput2:focus {
     outline: none;
 }
+
+
 
 #part2 {
     display: none;
