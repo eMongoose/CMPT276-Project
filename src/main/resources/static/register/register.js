@@ -55,3 +55,11 @@ function changePart() {
     }
 
 }
+
+function handleSubmit() {
+    const formData = {
+        username: document.getElementById("username"),
+        email: document.getElementById("userMail"),
+        password: document.getElementById("password"),
+    }
+}

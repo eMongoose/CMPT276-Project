@@ -1,6 +1,7 @@
 package org.mbsampling.mbs.Service;
 
 import org.mbsampling.mbs.Models.AuthenticationResponse;
+import org.mbsampling.mbs.Models.Role;
 import org.mbsampling.mbs.Models.Token;
 import org.mbsampling.mbs.Models.User;
 import org.mbsampling.mbs.Repository.TokenRepository;
@@ -48,13 +49,17 @@ public class AuthenticationService {
         }
 
         User user = new User();
-        user.setBrand(request.getBrand());
         user.setEmail(request.getEmail());
         user.setUsername(request.getUsername());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.setBrandname(request.getBrandname());
+        user.setFounders(request.getFounders());
+        user.setBrandStory(request.getBrandStory());
+        user.setWebsite(request.getWebsite());
+        user.setInstagram(request.getInstagram());
 
 
-        user.setRole(request.getRole());
+        user.setRole(Role.USER);
 
         user = repository.save(user);
 
